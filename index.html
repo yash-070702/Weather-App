@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icons8-weather-100.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="wrapper">
+<h1>WEATHER APP</h1>
+
+<div class="mini-wrapper">
+
+    <div class="tab-container">
+    <p class="tab" data-userWeather>Your Weather</p>
+    <p class="tab" data-searchWeather>Search Weather</p>
+</div>
+
+<div class="weather-container">
+
+    <div class=" sub-container grant-location-container">
+      <div><center><img  loading="lazy" src="./images/pngtree-pin-location-icon-with-folded-map-png-image_7581594-removebg-preview.png" height="120" width="120" alt=""></center>  </center>
+      </div>
+<center><p>grant Location Access</p></center> 
+<br>
+<center><p>Allow Access to get weather information <br> of your current Loaction</p></center> 
+<br>
+<center><button class="btn" data-grantAccess>Grant Access</button></center> 
+    </div>
+
+<form action="" class="form-container" data-searchForm>
+    <input type="text" placeholder="Search the City...." data-searchInput>
+    <button class="btn" type="submit">
+        <img src="./images/maxresdefault-removebg-preview.png"width="70" alt="">
+    </button>
+</form>
+
+<div class="loading-container">
+    <center><img src="./images/loading.gif" width="90" alt=""></center>
+    
+    <p>Loading...</p>
+</div>
+
+<div class="user-info-container">
+<div class="name">  <p  class="cityname" data-cityName></p>
+    <img  data-countryIcon alt="" ></div>
+  
+  <center><p data-weatherdesc></p></center>  
+   <center><img data-weatherIcon src="./images/3222800.png" alt=""></center> 
+   <center><p data-temp></p></center> 
+
+    <div class="parameter-container">
+        <div class="parameter">
+            <img src="./images/31_weather-wind-3.255d6d15df-removebg-preview (1).png" width="60" alt="">
+            <p>Windspeed</p>
+            <p data-windspeed></p>
+        </div>
+
+        <div class="parameter">
+            <img src="./images/images-removebg-preview.png" width="60"  alt="">
+            <p>Humidity</p>
+            <p data-humidity></p>
+        </div>
+
+        <div class="parameter">
+            <img src="./images/images-removebg-preview (1).png" width="60"  alt="">
+            <p>Clouds</p>
+            <p data-cloudiness></p>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <p>&copy; 2023 Yash Aggarwal . All Rights Reserved.</p>
+</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
