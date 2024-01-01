@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+overflow-x: hidden;
+}
+
+:root{
+    --colorDark1:#11204E;
+    --colorDark2:#3F72AF;
+    --colorLight1:#D8E2EF;
+    --colorLight2:#F9F7F7;
+}
+.wrapper{
+    width:100vw;
+    color:#F9F7F7;
+    height:100vh;
+    position: relative;
+    background-image: url('./images/photo-1584267385494-9fdd9a71ad75.avif');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover; 
+    font-family: 'Roboto', sans-serif;
+   
+    
+}
+
+.mini-wrapper{
+background-color: rgba(0, 0, 0, 0.527);
+border-radius: 1.5rem;
+box-shadow: 5px 5px 10px black;
+max-width: 600px;
+margin: auto;
+margin-top:1rem;
+font-family: 'Roboto', sans-serif;
+padding: 4rem 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2%;
+    text-transform: capitalize;
+color: #11204E;
+font-weight: 900;
+}
+
+.tab-container{
+    max-width: 550px;
+    margin: 0 auto;
+    /* margin-top: 4rem; */
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    letter-spacing: 1.75px;
+    padding:5px 8px;
+    font-weight: bold;
+    font-size:1.03rem ;
+}
+
+.tab.current-tab{
+    background-color: rgba(0, 0, 0, 0.418);
+    border-radius:4px ;
+    
+}
+
+.weather-container{
+    max-width: 600px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.btn{
+    all: unset;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    padding: 8px 20px;
+}
+
+
+.grant-location-container center:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: block;
+}
+
+ .loading-container{
+    max-width: 500px;
+    margin:0 auto;
+display: none; 
+    
+}
+.loading-container p{
+text-align: center;
+text-transform: uppercase;
+margin-top: 1.5rem;
+letter-spacing: 1px;
+font-weight: bold;
+font-size: 1.5rem;
+}
+
+
+.user-info-container{
+width: 550px;
+display: none; 
+}
+
+.active1{
+    display: block;
+}
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.user-info-container img{
+    width: 50px;
+    height:50px;
+}
+.name p{
+    font-size: 2rem;
+}
+
+.cityname{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.name img{
+    width:30px;
+    height: 30px;
+
+}
+
+p[data-weatherdesc]{
+    margin:10px 0;
+    font-weight: 500;
+    /* opacity: 0.8; */
+}
+.user-info-container p[data-temp]
+{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+@media(max-width:530px)
+{
+    .parameter-container{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+    }
+}
+
+.parameter{
+    background-color: rgba(68, 73, 82, 0.5);
+    width: 170px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.parameter img{
+    width:40px;
+    height: 40px;
+}
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    
+    font-size: 1.25rem;
+}
+
+.form-container{
+margin: 0 auto;
+display: none;
+justify-content: center;
+align-self: center;
+gap: 0 10px;
+padding: 15px;
+margin-bottom: 3rem;
+}
+.form-container.active{
+    display:flex;
+}
+
+.form-container.active2{
+    display:none;
+}
+
+.form-container input{
+    all:unset;
+    width:calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+color: black;
+font-size: 1.2rem;
+font-weight: bold;
+text-transform: capitalize;
+}
+
+.form-container input::placeholder{
+    color:rgba(255, 255, 255, 0.822);
+}
+
+.form-container input:focus{
+    outline: 3px solid rgba(255,255,255,0.7);
+}
+
+.form-container .btn{
+   all:unset;
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+ position: absolute;
+ width: 100%;
+ bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.525);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+@media(max-width:530px)
+{
+    .footer{
+       position: relative;
+    }
+}
